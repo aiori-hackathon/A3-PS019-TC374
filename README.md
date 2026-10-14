@@ -1,5 +1,4 @@
 # AIORI-3-HACKATHON-PROJECTS
-# AIORI-3-HACKATHON-PROJECTS
 # 🛡️ PS-019: Personal-Data Discovery & Privacy Evidence Inventory Engine
 
 [![AIORI Hackathon 3](https://img.shields.io/badge/AIORI%20Hackathon-3-blue.svg)](https://portal.aiori.in/)
