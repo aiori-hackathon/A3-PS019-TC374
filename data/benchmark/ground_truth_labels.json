@@ -1,0 +1,406 @@
+{
+  "metadata": {
+    "title": "PS-019 Privacy Evidence Ground Truth Benchmark",
+    "version": "1.0",
+    "description": "Exhaustive human-verified labels for synthetic CSVs and SQLite database columns.",
+    "total_columns": 51
+  },
+  "labels": [
+    {
+      "source_type": "CSV",
+      "dataset_name": "customers.csv",
+      "field_name": "customer_id",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "customers.csv",
+      "field_name": "full_name",
+      "ground_truth_class": "Direct_Personal_Identifiers"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "customers.csv",
+      "field_name": "email_address",
+      "ground_truth_class": "Contact_Location_Data"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "customers.csv",
+      "field_name": "phone_number",
+      "ground_truth_class": "Contact_Location_Data"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "customers.csv",
+      "field_name": "residential_address",
+      "ground_truth_class": "Contact_Location_Data"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "customers.csv",
+      "field_name": "pin_code",
+      "ground_truth_class": "Contact_Location_Data"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "customers.csv",
+      "field_name": "pan_card_no",
+      "ground_truth_class": "Government_National_IDs"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "customers.csv",
+      "field_name": "created_date",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "customers.csv",
+      "field_name": "account_status",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "hr_employees.csv",
+      "field_name": "emp_id",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "hr_employees.csv",
+      "field_name": "employee_name",
+      "ground_truth_class": "Direct_Personal_Identifiers"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "hr_employees.csv",
+      "field_name": "dob",
+      "ground_truth_class": "Direct_Personal_Identifiers"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "hr_employees.csv",
+      "field_name": "aadhaar_number",
+      "ground_truth_class": "Government_National_IDs"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "hr_employees.csv",
+      "field_name": "bank_account_no",
+      "ground_truth_class": "Financial_Banking_Data"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "hr_employees.csv",
+      "field_name": "ifsc_code",
+      "ground_truth_class": "Financial_Banking_Data"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "hr_employees.csv",
+      "field_name": "salary_ctc",
+      "ground_truth_class": "Financial_Banking_Data"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "hr_employees.csv",
+      "field_name": "department",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "support_tickets.csv",
+      "field_name": "ticket_id",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "support_tickets.csv",
+      "field_name": "reporter_email",
+      "ground_truth_class": "Contact_Location_Data"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "support_tickets.csv",
+      "field_name": "customer_ip",
+      "ground_truth_class": "Authentication_Digital_Telemetry"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "support_tickets.csv",
+      "field_name": "device_id",
+      "ground_truth_class": "Authentication_Digital_Telemetry"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "support_tickets.csv",
+      "field_name": "issue_description",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "support_tickets.csv",
+      "field_name": "resolution_status",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "support_tickets.csv",
+      "field_name": "priority_level",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "financial_transactions.csv",
+      "field_name": "txn_id",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "financial_transactions.csv",
+      "field_name": "credit_card_mask",
+      "ground_truth_class": "Financial_Banking_Data"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "financial_transactions.csv",
+      "field_name": "upi_vpa",
+      "ground_truth_class": "Financial_Banking_Data"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "financial_transactions.csv",
+      "field_name": "amount_inr",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "financial_transactions.csv",
+      "field_name": "txn_timestamp",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "financial_transactions.csv",
+      "field_name": "merchant_category_code",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "telemetry_logs.csv",
+      "field_name": "log_id",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "telemetry_logs.csv",
+      "field_name": "client_ip",
+      "ground_truth_class": "Authentication_Digital_Telemetry"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "telemetry_logs.csv",
+      "field_name": "mac_address",
+      "ground_truth_class": "Authentication_Digital_Telemetry"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "telemetry_logs.csv",
+      "field_name": "session_token",
+      "ground_truth_class": "Authentication_Digital_Telemetry"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "telemetry_logs.csv",
+      "field_name": "http_status",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "telemetry_logs.csv",
+      "field_name": "bytes_transferred",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:users",
+      "field_name": "id",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:users",
+      "field_name": "full_name",
+      "ground_truth_class": "Direct_Personal_Identifiers"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:users",
+      "field_name": "user_id_email",
+      "ground_truth_class": "Contact_Location_Data"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:users",
+      "field_name": "phone_number",
+      "ground_truth_class": "Contact_Location_Data"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:users",
+      "field_name": "password_hash",
+      "ground_truth_class": "Authentication_Digital_Telemetry"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:users",
+      "field_name": "role",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:billing_details",
+      "field_name": "billing_id",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:billing_details",
+      "field_name": "user_id",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:billing_details",
+      "field_name": "credit_card_mask",
+      "ground_truth_class": "Financial_Banking_Data"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:billing_details",
+      "field_name": "billing_address",
+      "ground_truth_class": "Contact_Location_Data"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:billing_details",
+      "field_name": "billing_pincode",
+      "ground_truth_class": "Contact_Location_Data"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:billing_details",
+      "field_name": "currency",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:patient_records",
+      "field_name": "patient_id",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:patient_records",
+      "field_name": "patient_name",
+      "ground_truth_class": "Direct_Personal_Identifiers"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:patient_records",
+      "field_name": "dob",
+      "ground_truth_class": "Direct_Personal_Identifiers"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:patient_records",
+      "field_name": "gender",
+      "ground_truth_class": "Direct_Personal_Identifiers"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:patient_records",
+      "field_name": "emergency_contact_phone",
+      "ground_truth_class": "Contact_Location_Data"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:patient_records",
+      "field_name": "blood_group",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:patient_records",
+      "field_name": "admission_notes",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:auth_sessions",
+      "field_name": "session_id",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:auth_sessions",
+      "field_name": "user_id",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:auth_sessions",
+      "field_name": "client_ip_address",
+      "ground_truth_class": "Authentication_Digital_Telemetry"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:auth_sessions",
+      "field_name": "user_agent_token",
+      "ground_truth_class": "Authentication_Digital_Telemetry"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:auth_sessions",
+      "field_name": "login_time",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:inventory_products",
+      "field_name": "product_id",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:inventory_products",
+      "field_name": "sku_code",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:inventory_products",
+      "field_name": "unit_price",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:inventory_products",
+      "field_name": "stock_quantity",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:inventory_products",
+      "field_name": "warehouse_bay",
+      "ground_truth_class": "Non_PII"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:inventory_products",
+      "field_name": "reorder_threshold",
+      "ground_truth_class": "Non_PII"
+    }
+  ]
+}

@@ -1,0 +1,2635 @@
+{
+  "scan_metadata": {
+    "scan_timestamp": "2026-10-13T17:25:56.361526",
+    "duration_seconds": 0.043,
+    "scanner_version": "PS-019-v1.0",
+    "framework_alignment": "MeitY DPDPA 2023 & ISO/IEC 27701",
+    "legal_disclaimer": "TECHNICAL EVIDENCE ONLY: This inventory represents technical observations of data syntax, column semantics, and documented governance links. It does NOT constitute legal advice or an automated certification of lawful basis under the Digital Personal Data Protection Act (DPDPA 2023) or GDPR. All findings require human review by designated Data Protection Officers (DPOs) or privacy legal counsel."
+  },
+  "summary_metrics": {
+    "total_columns_inspected": 66,
+    "candidate_personal_data_fields": 35,
+    "non_personal_data_fields": 31,
+    "documented_personal_fields": 10,
+    "shadow_pii_with_evidence_gaps": 25,
+    "evidence_gap_rate_percent": 71.43,
+    "class_counts": {
+      "Direct_Personal_Identifiers": 7,
+      "Contact_Location_Data": 11,
+      "Government_National_IDs": 2,
+      "Financial_Banking_Data": 5,
+      "Authentication_Digital_Telemetry": 10
+    },
+    "missing_purpose_count": 25,
+    "missing_retention_count": 25,
+    "indefinite_retention_count": 0,
+    "orphaned_governance_policies": 0
+  },
+  "orphaned_policies": [],
+  "evidence_inventory": [
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\customers.csv",
+      "dataset_name": "customers.csv",
+      "field_name": "customer_id",
+      "field_index": 0,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 100,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\customers.csv",
+      "dataset_name": "customers.csv",
+      "field_name": "full_name",
+      "field_index": 1,
+      "predicted_class": "Direct_Personal_Identifiers",
+      "class_display_name": "Direct Personal Identifiers",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(name|full_?name|first_?name|last_?name|fname|lname|surname|cust_?name|patient_?name|employee_?name).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 100,
+        "sample_size": 100,
+        "matched_sample_examples": [
+          "Vi*******er",
+          "Pr*******ta",
+          "An*********ra"
+        ],
+        "class_display_name": "Direct Personal Identifiers",
+        "class_description": "Information that explicitly identifies an individual on its own or with basic context (Names, Birthdates, Demographics)."
+      },
+      "governance_metadata": {
+        "is_documented": true,
+        "declared_purpose": "Customer Account Creation & Identity Verification",
+        "retention_period": "5 Years Post Account Inactivity",
+        "retention_law_reference": "Consumer Protection Rules, 2020",
+        "data_owner": "Customer Success Operations",
+        "human_legal_note": "Contractual Necessity (Human Review Verified)"
+      },
+      "evidence_gaps": [],
+      "audit_status": "DOCUMENTED_INVENTORY",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\customers.csv",
+      "dataset_name": "customers.csv",
+      "field_name": "email_address",
+      "field_index": 2,
+      "predicted_class": "Contact_Location_Data",
+      "class_display_name": "Contact & Location Data",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(email|e_?mail|mail_?address|contact_?email|reporter_?email|user_?id_?email).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 100,
+        "sample_size": 100,
+        "matched_sample_examples": [
+          "vi***********************et",
+          "pr********************om",
+          "an*************************et"
+        ],
+        "class_display_name": "Contact & Location Data",
+        "class_description": "Geographic coordinates, physical mailing addresses, telephone numbers, and email communication handles."
+      },
+      "governance_metadata": {
+        "is_documented": true,
+        "declared_purpose": "Transactional Notifications & Authentication",
+        "retention_period": "5 Years Post Account Inactivity",
+        "retention_law_reference": "Consumer Protection Rules, 2020",
+        "data_owner": "Customer Success Operations",
+        "human_legal_note": "Contractual Necessity (Human Review Verified)"
+      },
+      "evidence_gaps": [],
+      "audit_status": "DOCUMENTED_INVENTORY",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\customers.csv",
+      "dataset_name": "customers.csv",
+      "field_name": "phone_number",
+      "field_index": 3,
+      "predicted_class": "Contact_Location_Data",
+      "class_display_name": "Contact & Location Data",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(phone|tel|mobile|cell|contact_?no|phone_?num|emergency_?contact).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 100,
+        "sample_size": 100,
+        "matched_sample_examples": [
+          "81******31",
+          "96******78",
+          "81******51"
+        ],
+        "class_display_name": "Contact & Location Data",
+        "class_description": "Geographic coordinates, physical mailing addresses, telephone numbers, and email communication handles."
+      },
+      "governance_metadata": {
+        "is_documented": true,
+        "declared_purpose": "Two-Factor Authentication & SMS Alerts",
+        "retention_period": "3 Years Post Account Inactivity",
+        "retention_law_reference": "Telecom Regulations",
+        "data_owner": "Security Engineering",
+        "human_legal_note": "Legitimate Security Interest (Human Review Verified)"
+      },
+      "evidence_gaps": [],
+      "audit_status": "DOCUMENTED_INVENTORY",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\customers.csv",
+      "dataset_name": "customers.csv",
+      "field_name": "residential_address",
+      "field_index": 4,
+      "predicted_class": "Contact_Location_Data",
+      "class_display_name": "Contact & Location Data",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(address|street|addr|residence|house_?no|flat_?no|apartment|billing_?address).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 100,
+        "sample_size": 100,
+        "matched_sample_examples": [
+          "66*********************ai",
+          "75**************************ru",
+          "85************************ad"
+        ],
+        "class_display_name": "Contact & Location Data",
+        "class_description": "Geographic coordinates, physical mailing addresses, telephone numbers, and email communication handles."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\customers.csv",
+      "dataset_name": "customers.csv",
+      "field_name": "pin_code",
+      "field_index": 5,
+      "predicted_class": "Contact_Location_Data",
+      "class_display_name": "Contact & Location Data",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(postal|zip|zip_?code|pincode|pin_?code|billing_?pincode|gps|latitude|longitude|lat_?long).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 100,
+        "sample_size": 100,
+        "matched_sample_examples": [
+          "***",
+          "***",
+          "***"
+        ],
+        "class_display_name": "Contact & Location Data",
+        "class_description": "Geographic coordinates, physical mailing addresses, telephone numbers, and email communication handles."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\customers.csv",
+      "dataset_name": "customers.csv",
+      "field_name": "pan_card_no",
+      "field_index": 6,
+      "predicted_class": "Government_National_IDs",
+      "class_display_name": "Government & National IDs",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(pan|pan_?card|pan_?num|tax_?id|ssn|social_?security).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 100,
+        "sample_size": 100,
+        "matched_sample_examples": [
+          "QZ******0N",
+          "SC******2U",
+          "BM******6H"
+        ],
+        "class_display_name": "Government & National IDs",
+        "class_description": "Statutory identifiers issued by national sovereign authorities (e.g., Aadhaar, PAN, Passport, SSN)."
+      },
+      "governance_metadata": {
+        "is_documented": true,
+        "declared_purpose": "Statutory Financial KYC Verification",
+        "retention_period": "8 Years (Income Tax Act Section 149)",
+        "retention_law_reference": "Income Tax Act, 1961",
+        "data_owner": "Compliance & Legal",
+        "human_legal_note": "Statutory Obligation (Human Review Verified)"
+      },
+      "evidence_gaps": [],
+      "audit_status": "DOCUMENTED_INVENTORY",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\customers.csv",
+      "dataset_name": "customers.csv",
+      "field_name": "created_date",
+      "field_index": 7,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 100,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\customers.csv",
+      "dataset_name": "customers.csv",
+      "field_name": "account_status",
+      "field_index": 8,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 100,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\financial_transactions.csv",
+      "dataset_name": "financial_transactions.csv",
+      "field_name": "txn_id",
+      "field_index": 0,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 100,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\financial_transactions.csv",
+      "dataset_name": "financial_transactions.csv",
+      "field_name": "credit_card_mask",
+      "field_index": 1,
+      "predicted_class": "Financial_Banking_Data",
+      "class_display_name": "Financial & Banking Data",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(card_?num|credit_?card|debit_?card|cc_?num|card_?no|credit_?card_?mask).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 100,
+        "sample_size": 100,
+        "matched_sample_examples": [
+          "45***************40",
+          "45***************90",
+          "45***************91"
+        ],
+        "class_display_name": "Financial & Banking Data",
+        "class_description": "Payment instrument identifiers, bank account records, financial compensation, and card security codes."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\financial_transactions.csv",
+      "dataset_name": "financial_transactions.csv",
+      "field_name": "upi_vpa",
+      "field_index": 2,
+      "predicted_class": "Financial_Banking_Data",
+      "class_display_name": "Financial & Banking Data",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(salary|compensation|ctc|income|cvv|cvv2|upi|vpa).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 100,
+        "sample_size": 100,
+        "matched_sample_examples": [
+          "pa************nk",
+          "pa*****bl",
+          "pa************nk"
+        ],
+        "class_display_name": "Financial & Banking Data",
+        "class_description": "Payment instrument identifiers, bank account records, financial compensation, and card security codes."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\financial_transactions.csv",
+      "dataset_name": "financial_transactions.csv",
+      "field_name": "amount_inr",
+      "field_index": 3,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 100,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\financial_transactions.csv",
+      "dataset_name": "financial_transactions.csv",
+      "field_name": "txn_timestamp",
+      "field_index": 4,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 100,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\financial_transactions.csv",
+      "dataset_name": "financial_transactions.csv",
+      "field_name": "merchant_category_code",
+      "field_index": 5,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 100,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\hr_employees.csv",
+      "dataset_name": "hr_employees.csv",
+      "field_name": "emp_id",
+      "field_index": 0,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 100,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\hr_employees.csv",
+      "dataset_name": "hr_employees.csv",
+      "field_name": "employee_name",
+      "field_index": 1,
+      "predicted_class": "Direct_Personal_Identifiers",
+      "class_display_name": "Direct Personal Identifiers",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(name|full_?name|first_?name|last_?name|fname|lname|surname|cust_?name|patient_?name|employee_?name).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 100,
+        "sample_size": 100,
+        "matched_sample_examples": [
+          "Vi*******er",
+          "Aa********ra",
+          "Aa*******ta"
+        ],
+        "class_display_name": "Direct Personal Identifiers",
+        "class_description": "Information that explicitly identifies an individual on its own or with basic context (Names, Birthdates, Demographics)."
+      },
+      "governance_metadata": {
+        "is_documented": true,
+        "declared_purpose": "HR Payroll Administration",
+        "retention_period": "7 Years Post Employment Termination",
+        "retention_law_reference": "Payment of Wages Act",
+        "data_owner": "Human Resources",
+        "human_legal_note": "Employment Contract (Human Review Verified)"
+      },
+      "evidence_gaps": [],
+      "audit_status": "DOCUMENTED_INVENTORY",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\hr_employees.csv",
+      "dataset_name": "hr_employees.csv",
+      "field_name": "dob",
+      "field_index": 2,
+      "predicted_class": "Direct_Personal_Identifiers",
+      "class_display_name": "Direct Personal Identifiers",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(dob|date_?of_?birth|birth_?date|birth_?day|gender|sex|marital_?status|mother_?maiden).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 100,
+        "sample_size": 100,
+        "matched_sample_examples": [
+          "19******22",
+          "19******27",
+          "19******11"
+        ],
+        "class_display_name": "Direct Personal Identifiers",
+        "class_description": "Information that explicitly identifies an individual on its own or with basic context (Names, Birthdates, Demographics)."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\hr_employees.csv",
+      "dataset_name": "hr_employees.csv",
+      "field_name": "aadhaar_number",
+      "field_index": 3,
+      "predicted_class": "Government_National_IDs",
+      "class_display_name": "Government & National IDs",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(aadhaar|aadhar|uidai|uid_?num).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 100,
+        "sample_size": 100,
+        "matched_sample_examples": [
+          "95**********71",
+          "56**********50",
+          "44**********48"
+        ],
+        "class_display_name": "Government & National IDs",
+        "class_description": "Statutory identifiers issued by national sovereign authorities (e.g., Aadhaar, PAN, Passport, SSN)."
+      },
+      "governance_metadata": {
+        "is_documented": true,
+        "declared_purpose": "PF & Gratuity Statutory Filing",
+        "retention_period": "10 Years Post Retirement",
+        "retention_law_reference": "EPFO Mandate / Aadhaar Act 2016",
+        "data_owner": "Payroll Compliance",
+        "human_legal_note": "Statutory Obligation (Human Review Verified)"
+      },
+      "evidence_gaps": [],
+      "audit_status": "DOCUMENTED_INVENTORY",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\hr_employees.csv",
+      "dataset_name": "hr_employees.csv",
+      "field_name": "bank_account_no",
+      "field_index": 4,
+      "predicted_class": "Financial_Banking_Data",
+      "class_display_name": "Financial & Banking Data",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(bank_?acc|account_?no|acc_?num|iban|ifsc|ifsc_?code|swift).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 100,
+        "sample_size": 100,
+        "matched_sample_examples": [
+          "52*******78",
+          "99*******84",
+          "98*******61"
+        ],
+        "class_display_name": "Financial & Banking Data",
+        "class_description": "Payment instrument identifiers, bank account records, financial compensation, and card security codes."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\hr_employees.csv",
+      "dataset_name": "hr_employees.csv",
+      "field_name": "ifsc_code",
+      "field_index": 5,
+      "predicted_class": "Financial_Banking_Data",
+      "class_display_name": "Financial & Banking Data",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(bank_?acc|account_?no|acc_?num|iban|ifsc|ifsc_?code|swift).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 100,
+        "sample_size": 100,
+        "matched_sample_examples": [
+          "HD*******76",
+          "SB*******96",
+          "SB*******94"
+        ],
+        "class_display_name": "Financial & Banking Data",
+        "class_description": "Payment instrument identifiers, bank account records, financial compensation, and card security codes."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\hr_employees.csv",
+      "dataset_name": "hr_employees.csv",
+      "field_name": "salary_ctc",
+      "field_index": 6,
+      "predicted_class": "Contact_Location_Data",
+      "class_display_name": "Contact & Location Data",
+      "confidence_score": 0.5,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.35,
+        "sample_matches_count": 35,
+        "sample_size": 100,
+        "matched_sample_examples": [
+          "***",
+          "***",
+          "***"
+        ],
+        "class_display_name": "Contact & Location Data",
+        "class_description": "Geographic coordinates, physical mailing addresses, telephone numbers, and email communication handles."
+      },
+      "governance_metadata": {
+        "is_documented": true,
+        "declared_purpose": "Compensation Disbursement",
+        "retention_period": "7 Years Post Employment Termination",
+        "retention_law_reference": "Income Tax Act, 1961",
+        "data_owner": "Finance Department",
+        "human_legal_note": "Contractual Necessity (Human Review Verified)"
+      },
+      "evidence_gaps": [],
+      "audit_status": "DOCUMENTED_INVENTORY",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\hr_employees.csv",
+      "dataset_name": "hr_employees.csv",
+      "field_name": "department",
+      "field_index": 7,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 100,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\support_tickets.csv",
+      "dataset_name": "support_tickets.csv",
+      "field_name": "ticket_id",
+      "field_index": 0,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 80,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\support_tickets.csv",
+      "dataset_name": "support_tickets.csv",
+      "field_name": "reporter_email",
+      "field_index": 1,
+      "predicted_class": "Contact_Location_Data",
+      "class_display_name": "Contact & Location Data",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(email|e_?mail|mail_?address|contact_?email|reporter_?email|user_?id_?email).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 80,
+        "sample_size": 80,
+        "matched_sample_examples": [
+          "us*****************et",
+          "us**************om",
+          "us*****************rg"
+        ],
+        "class_display_name": "Contact & Location Data",
+        "class_description": "Geographic coordinates, physical mailing addresses, telephone numbers, and email communication handles."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\support_tickets.csv",
+      "dataset_name": "support_tickets.csv",
+      "field_name": "customer_ip",
+      "field_index": 2,
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "class_display_name": "Digital Identity & Telemetry",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(ip_?addr|ipv4|ipv6|client_?ip|remote_?addr|customer_?ip).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 80,
+        "sample_size": 80,
+        "matched_sample_examples": [
+          "10**********80",
+          "14***********14",
+          "15**********59"
+        ],
+        "class_display_name": "Digital Identity & Telemetry",
+        "class_description": "Network artifacts, device fingerprints, credential hashes, and user login handles."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\support_tickets.csv",
+      "dataset_name": "support_tickets.csv",
+      "field_name": "device_id",
+      "field_index": 3,
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "class_display_name": "Digital Identity & Telemetry",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(mac_?addr|mac|hardware_?id|device_?id|device_?fingerprint).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 80,
+        "sample_size": 80,
+        "matched_sample_examples": [
+          "de*************63",
+          "de*************77",
+          "de*************33"
+        ],
+        "class_display_name": "Digital Identity & Telemetry",
+        "class_description": "Network artifacts, device fingerprints, credential hashes, and user login handles."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\support_tickets.csv",
+      "dataset_name": "support_tickets.csv",
+      "field_name": "issue_description",
+      "field_index": 4,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 80,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\support_tickets.csv",
+      "dataset_name": "support_tickets.csv",
+      "field_name": "resolution_status",
+      "field_index": 5,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 80,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\support_tickets.csv",
+      "dataset_name": "support_tickets.csv",
+      "field_name": "priority_level",
+      "field_index": 6,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 80,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\telemetry_logs.csv",
+      "dataset_name": "telemetry_logs.csv",
+      "field_name": "log_id",
+      "field_index": 0,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 100,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\telemetry_logs.csv",
+      "dataset_name": "telemetry_logs.csv",
+      "field_name": "client_ip",
+      "field_index": 1,
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "class_display_name": "Digital Identity & Telemetry",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(ip_?addr|ipv4|ipv6|client_?ip|remote_?addr|customer_?ip).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 100,
+        "sample_size": 100,
+        "matched_sample_examples": [
+          "20***********47",
+          "20********40",
+          "11***********12"
+        ],
+        "class_display_name": "Digital Identity & Telemetry",
+        "class_description": "Network artifacts, device fingerprints, credential hashes, and user login handles."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\telemetry_logs.csv",
+      "dataset_name": "telemetry_logs.csv",
+      "field_name": "mac_address",
+      "field_index": 2,
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "class_display_name": "Digital Identity & Telemetry",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(mac_?addr|mac|hardware_?id|device_?id|device_?fingerprint).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 100,
+        "sample_size": 100,
+        "matched_sample_examples": [
+          "6C*************85",
+          "72*************97",
+          "C6*************8B"
+        ],
+        "class_display_name": "Digital Identity & Telemetry",
+        "class_description": "Network artifacts, device fingerprints, credential hashes, and user login handles."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\telemetry_logs.csv",
+      "dataset_name": "telemetry_logs.csv",
+      "field_name": "session_token",
+      "field_index": 3,
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "class_display_name": "Digital Identity & Telemetry",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(password_?hash|pwd_?hash|passwd|token|session_?token|session_?id|auth_?token|username|login|user_?agent_?token).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 100,
+        "sample_size": 100,
+        "matched_sample_examples": [
+          "se***********_1",
+          "se***********_2",
+          "se***********_3"
+        ],
+        "class_display_name": "Digital Identity & Telemetry",
+        "class_description": "Network artifacts, device fingerprints, credential hashes, and user login handles."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\telemetry_logs.csv",
+      "dataset_name": "telemetry_logs.csv",
+      "field_name": "http_status",
+      "field_index": 4,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 100,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "CSV",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\raw\\telemetry_logs.csv",
+      "dataset_name": "telemetry_logs.csv",
+      "field_name": "bytes_transferred",
+      "field_index": 5,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 100,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:users",
+      "table_name": "users",
+      "field_name": "id",
+      "field_index": 0,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 74,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:users",
+      "table_name": "users",
+      "field_name": "full_name",
+      "field_index": 1,
+      "predicted_class": "Direct_Personal_Identifiers",
+      "class_display_name": "Direct Personal Identifiers",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(name|full_?name|first_?name|last_?name|fname|lname|surname|cust_?name|patient_?name|employee_?name).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 74,
+        "sample_size": 74,
+        "matched_sample_examples": [
+          "Po******er",
+          "An******as",
+          "Ad********ma"
+        ],
+        "class_display_name": "Direct Personal Identifiers",
+        "class_description": "Information that explicitly identifies an individual on its own or with basic context (Names, Birthdates, Demographics)."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:users",
+      "table_name": "users",
+      "field_name": "user_id_email",
+      "field_index": 2,
+      "predicted_class": "Contact_Location_Data",
+      "class_display_name": "Contact & Location Data",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(email|e_?mail|mail_?address|contact_?email|reporter_?email|user_?id_?email).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 74,
+        "sample_size": 74,
+        "matched_sample_examples": [
+          "po********************al",
+          "an********************al",
+          "ad**********************al"
+        ],
+        "class_display_name": "Contact & Location Data",
+        "class_description": "Geographic coordinates, physical mailing addresses, telephone numbers, and email communication handles."
+      },
+      "governance_metadata": {
+        "is_documented": true,
+        "declared_purpose": "Platform Single Sign-On and Recovery",
+        "retention_period": "3 Years Post Deletion Request",
+        "retention_law_reference": "Information Technology Rules 2011",
+        "data_owner": "Identity Access Management",
+        "human_legal_note": "User Consent (Human Review Verified)"
+      },
+      "evidence_gaps": [],
+      "audit_status": "DOCUMENTED_INVENTORY",
+      "human_review_required": true
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:users",
+      "table_name": "users",
+      "field_name": "phone_number",
+      "field_index": 3,
+      "predicted_class": "Contact_Location_Data",
+      "class_display_name": "Contact & Location Data",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(phone|tel|mobile|cell|contact_?no|phone_?num|emergency_?contact).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 74,
+        "sample_size": 74,
+        "matched_sample_examples": [
+          "90******19",
+          "93******92",
+          "95******57"
+        ],
+        "class_display_name": "Contact & Location Data",
+        "class_description": "Geographic coordinates, physical mailing addresses, telephone numbers, and email communication handles."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:users",
+      "table_name": "users",
+      "field_name": "password_hash",
+      "field_index": 4,
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "class_display_name": "Digital Identity & Telemetry",
+      "confidence_score": 0.5,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(password_?hash|pwd_?hash|passwd|token|session_?token|session_?id|auth_?token|username|login|user_?agent_?token).*$",
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 74,
+        "matched_sample_examples": [],
+        "class_display_name": "Digital Identity & Telemetry",
+        "class_description": "Network artifacts, device fingerprints, credential hashes, and user login handles."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:users",
+      "table_name": "users",
+      "field_name": "role",
+      "field_index": 5,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 74,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:billing_details",
+      "table_name": "billing_details",
+      "field_name": "billing_id",
+      "field_index": 0,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 59,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:billing_details",
+      "table_name": "billing_details",
+      "field_name": "user_id",
+      "field_index": 1,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 59,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:billing_details",
+      "table_name": "billing_details",
+      "field_name": "credit_card_mask",
+      "field_index": 2,
+      "predicted_class": "Financial_Banking_Data",
+      "class_display_name": "Financial & Banking Data",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(card_?num|credit_?card|debit_?card|cc_?num|card_?no|credit_?card_?mask).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 59,
+        "sample_size": 59,
+        "matched_sample_examples": [
+          "45***************08",
+          "45***************39",
+          "45***************18"
+        ],
+        "class_display_name": "Financial & Banking Data",
+        "class_description": "Payment instrument identifiers, bank account records, financial compensation, and card security codes."
+      },
+      "governance_metadata": {
+        "is_documented": true,
+        "declared_purpose": "Recurring Subscription Billing Tokenization",
+        "retention_period": "180 Days Post Transaction (PCI-DSS / RBI CoFT)",
+        "retention_law_reference": "RBI Card-on-File Tokenization Guidelines",
+        "data_owner": "Payment Operations",
+        "human_legal_note": "Contractual Necessity (Human Review Verified)"
+      },
+      "evidence_gaps": [],
+      "audit_status": "DOCUMENTED_INVENTORY",
+      "human_review_required": true
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:billing_details",
+      "table_name": "billing_details",
+      "field_name": "billing_address",
+      "field_index": 3,
+      "predicted_class": "Contact_Location_Data",
+      "class_display_name": "Contact & Location Data",
+      "confidence_score": 0.5,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(address|street|addr|residence|house_?no|flat_?no|apartment|billing_?address).*$",
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 59,
+        "matched_sample_examples": [],
+        "class_display_name": "Contact & Location Data",
+        "class_description": "Geographic coordinates, physical mailing addresses, telephone numbers, and email communication handles."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:billing_details",
+      "table_name": "billing_details",
+      "field_name": "billing_pincode",
+      "field_index": 4,
+      "predicted_class": "Contact_Location_Data",
+      "class_display_name": "Contact & Location Data",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(postal|zip|zip_?code|pincode|pin_?code|billing_?pincode|gps|latitude|longitude|lat_?long).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 59,
+        "sample_size": 59,
+        "matched_sample_examples": [
+          "***",
+          "***",
+          "***"
+        ],
+        "class_display_name": "Contact & Location Data",
+        "class_description": "Geographic coordinates, physical mailing addresses, telephone numbers, and email communication handles."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:billing_details",
+      "table_name": "billing_details",
+      "field_name": "currency",
+      "field_index": 5,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 59,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:patient_records",
+      "table_name": "patient_records",
+      "field_name": "patient_id",
+      "field_index": 0,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 49,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:patient_records",
+      "table_name": "patient_records",
+      "field_name": "patient_name",
+      "field_index": 1,
+      "predicted_class": "Direct_Personal_Identifiers",
+      "class_display_name": "Direct Personal Identifiers",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(name|full_?name|first_?name|last_?name|fname|lname|surname|cust_?name|patient_?name|employee_?name).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 49,
+        "sample_size": 49,
+        "matched_sample_examples": [
+          "Ad******as",
+          "Ne*********kh",
+          "Ar*******ta"
+        ],
+        "class_display_name": "Direct Personal Identifiers",
+        "class_description": "Information that explicitly identifies an individual on its own or with basic context (Names, Birthdates, Demographics)."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:patient_records",
+      "table_name": "patient_records",
+      "field_name": "dob",
+      "field_index": 2,
+      "predicted_class": "Direct_Personal_Identifiers",
+      "class_display_name": "Direct Personal Identifiers",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(dob|date_?of_?birth|birth_?date|birth_?day|gender|sex|marital_?status|mother_?maiden).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 49,
+        "sample_size": 49,
+        "matched_sample_examples": [
+          "19******02",
+          "19******27",
+          "19******25"
+        ],
+        "class_display_name": "Direct Personal Identifiers",
+        "class_description": "Information that explicitly identifies an individual on its own or with basic context (Names, Birthdates, Demographics)."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:patient_records",
+      "table_name": "patient_records",
+      "field_name": "gender",
+      "field_index": 3,
+      "predicted_class": "Direct_Personal_Identifiers",
+      "class_display_name": "Direct Personal Identifiers",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(dob|date_?of_?birth|birth_?date|birth_?day|gender|sex|marital_?status|mother_?maiden).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 49,
+        "sample_size": 49,
+        "matched_sample_examples": [
+          "***",
+          "***",
+          "***"
+        ],
+        "class_display_name": "Direct Personal Identifiers",
+        "class_description": "Information that explicitly identifies an individual on its own or with basic context (Names, Birthdates, Demographics)."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:patient_records",
+      "table_name": "patient_records",
+      "field_name": "emergency_contact_phone",
+      "field_index": 4,
+      "predicted_class": "Contact_Location_Data",
+      "class_display_name": "Contact & Location Data",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(phone|tel|mobile|cell|contact_?no|phone_?num|emergency_?contact).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 49,
+        "sample_size": 49,
+        "matched_sample_examples": [
+          "61******04",
+          "63******43",
+          "83******43"
+        ],
+        "class_display_name": "Contact & Location Data",
+        "class_description": "Geographic coordinates, physical mailing addresses, telephone numbers, and email communication handles."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:patient_records",
+      "table_name": "patient_records",
+      "field_name": "blood_group",
+      "field_index": 5,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 49,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:patient_records",
+      "table_name": "patient_records",
+      "field_name": "admission_notes",
+      "field_index": 6,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 49,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:auth_sessions",
+      "table_name": "auth_sessions",
+      "field_name": "session_id",
+      "field_index": 0,
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "class_display_name": "Digital Identity & Telemetry",
+      "confidence_score": 0.5,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(password_?hash|pwd_?hash|passwd|token|session_?token|session_?id|auth_?token|username|login|user_?agent_?token).*$",
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 89,
+        "matched_sample_examples": [],
+        "class_display_name": "Digital Identity & Telemetry",
+        "class_description": "Network artifacts, device fingerprints, credential hashes, and user login handles."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:auth_sessions",
+      "table_name": "auth_sessions",
+      "field_name": "user_id",
+      "field_index": 1,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 89,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:auth_sessions",
+      "table_name": "auth_sessions",
+      "field_name": "client_ip_address",
+      "field_index": 2,
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "class_display_name": "Digital Identity & Telemetry",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(ip_?addr|ipv4|ipv6|client_?ip|remote_?addr|customer_?ip).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 89,
+        "sample_size": 89,
+        "matched_sample_examples": [
+          "21**********34",
+          "17********30",
+          "96*******66"
+        ],
+        "class_display_name": "Digital Identity & Telemetry",
+        "class_description": "Network artifacts, device fingerprints, credential hashes, and user login handles."
+      },
+      "governance_metadata": {
+        "is_documented": true,
+        "declared_purpose": "Cyber Threat Prevention & Access Logging",
+        "retention_period": "180 Days (CERT-In Mandate)",
+        "retention_law_reference": "CERT-In Cyber Security Directions 2022",
+        "data_owner": "SOC / Cybersecurity",
+        "human_legal_note": "Legal Security Obligation (Human Review Verified)"
+      },
+      "evidence_gaps": [],
+      "audit_status": "DOCUMENTED_INVENTORY",
+      "human_review_required": true
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:auth_sessions",
+      "table_name": "auth_sessions",
+      "field_name": "user_agent_token",
+      "field_index": 3,
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "class_display_name": "Digital Identity & Telemetry",
+      "confidence_score": 1.0,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(password_?hash|pwd_?hash|passwd|token|session_?token|session_?id|auth_?token|username|login|user_?agent_?token).*$",
+        "sample_match_ratio": 1.0,
+        "sample_matches_count": 89,
+        "sample_size": 89,
+        "matched_sample_examples": [
+          "Mo************************43",
+          "Mo************************30",
+          "Mo************************84"
+        ],
+        "class_display_name": "Digital Identity & Telemetry",
+        "class_description": "Network artifacts, device fingerprints, credential hashes, and user login handles."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:auth_sessions",
+      "table_name": "auth_sessions",
+      "field_name": "login_time",
+      "field_index": 4,
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "class_display_name": "Digital Identity & Telemetry",
+      "confidence_score": 0.5,
+      "is_personal_data": true,
+      "detection_evidence": {
+        "header_matched": true,
+        "matching_header_pattern": "(?i)^.*(password_?hash|pwd_?hash|passwd|token|session_?token|session_?id|auth_?token|username|login|user_?agent_?token).*$",
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 89,
+        "matched_sample_examples": [],
+        "class_display_name": "Digital Identity & Telemetry",
+        "class_description": "Network artifacts, device fingerprints, credential hashes, and user login handles."
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "NOT DECLARED [GAP]",
+        "retention_period": "NOT SPECIFIED [GAP]",
+        "retention_law_reference": "N/A",
+        "data_owner": "UNASSIGNED [GAP]",
+        "human_legal_note": "Awaiting Human Legal Assessment"
+      },
+      "evidence_gaps": [
+        {
+          "gap_code": "GAP_MISSING_PURPOSE",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO registered business processing purpose."
+        },
+        {
+          "gap_code": "GAP_MISSING_RETENTION",
+          "severity": "HIGH",
+          "message": "Field contains Personal Data with NO declared lifecycle or retention schedule."
+        },
+        {
+          "gap_code": "GAP_MISSING_OWNER",
+          "severity": "LOW",
+          "message": "No functional business department or data fiduciary custodian assigned."
+        }
+      ],
+      "audit_status": "EVIDENCE_GAP_FLAGGED",
+      "human_review_required": true
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:inventory_products",
+      "table_name": "inventory_products",
+      "field_name": "product_id",
+      "field_index": 0,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 79,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:inventory_products",
+      "table_name": "inventory_products",
+      "field_name": "sku_code",
+      "field_index": 1,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 79,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:inventory_products",
+      "table_name": "inventory_products",
+      "field_name": "unit_price",
+      "field_index": 2,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 79,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:inventory_products",
+      "table_name": "inventory_products",
+      "field_name": "stock_quantity",
+      "field_index": 3,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 79,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:inventory_products",
+      "table_name": "inventory_products",
+      "field_name": "warehouse_bay",
+      "field_index": 4,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 79,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    },
+    {
+      "source_type": "SQL",
+      "source_location": "C:\\Users\\jenij\\Desktop\\Hackathon\\data\\enterprise.db",
+      "dataset_name": "enterprise.db:inventory_products",
+      "table_name": "inventory_products",
+      "field_name": "reorder_threshold",
+      "field_index": 5,
+      "predicted_class": "Non_PII",
+      "class_display_name": "Non_PII",
+      "confidence_score": 0.0,
+      "is_personal_data": false,
+      "detection_evidence": {
+        "header_matched": false,
+        "matching_header_pattern": null,
+        "sample_match_ratio": 0.0,
+        "sample_matches_count": 0,
+        "sample_size": 79,
+        "matched_sample_examples": []
+      },
+      "governance_metadata": {
+        "is_documented": false,
+        "declared_purpose": "N/A (Non-PII)",
+        "retention_period": "N/A (Non-PII)",
+        "retention_law_reference": "N/A",
+        "data_owner": "N/A",
+        "human_legal_note": "N/A"
+      },
+      "evidence_gaps": [],
+      "audit_status": "NON_PII_EXCLUDED",
+      "human_review_required": false
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+customer_id,full_name,email_address,phone_number,residential_address,pin_code,pan_card_no,created_date,account_status
+CUST-1001,Vikram Iyer,vikram.iyer1@cloudindia.net,8164757131,"669, Park Street, Chennai",521258,QZOIF9950N,2025-08-18,VERIFIED
+CUST-1002,Priya Mehta,priya.mehta2@example.com,9613603578,"75, Connaught Place, Bengaluru",402836,SCCFD2462U,2026-02-27,ACTIVE
+CUST-1003,Ananya Chopra,ananya.chopra3@cloudindia.net,8183424451,"851, Brigade Road, Ahmedabad",301012,BMQSZ2896H,2026-02-08,PENDING_KYC
+CUST-1004,Pooja Patel,pooja.patel4@example.com,7544148484,"855, Koramangala, New Delhi",501627,FRDIY1458J,2026-04-17,DORMANT
+CUST-1005,Priya Gupta,priya.gupta5@mailservice.in,6580522235,"269, Ring Road, Hyderabad",502042,SBULM6683C,2026-09-08,PENDING_KYC
+CUST-1006,Priya Sharma,priya.sharma6@mailservice.in,8847106446,"708, Koramangala, Chennai",550329,ZMIUT8503T,2026-04-10,PENDING_KYC
+CUST-1007,Kavita Singh,kavita.singh7@enterprise.org,8424649388,"780, Connaught Place, Hyderabad",572474,FMTSE8638Y,2025-07-07,DORMANT
+CUST-1008,Ananya Patel,ananya.patel8@techcorp.io,9195679000,"58, Connaught Place, Hyderabad",462177,INBOO1593B,2026-04-08,DORMANT
+CUST-1009,Rahul Nair,rahul.nair9@techcorp.io,8252794621,"173, Koramangala, Chennai",264824,HRWRA2044E,2026-04-11,VERIFIED
+CUST-1010,Aditya Verma,aditya.verma10@cloudindia.net,6753258903,"752, Park Street, New Delhi",138104,WUZSH9597W,2026-09-19,PENDING_KYC
+CUST-1011,Arjun Iyer,arjun.iyer11@example.com,6966751308,"75, Brigade Road, Hyderabad",543998,ADFDH2569N,2025-09-20,ACTIVE
+CUST-1012,Ananya Gupta,ananya.gupta12@techcorp.io,9194409405,"28, Koramangala, Ahmedabad",585862,RTYVO4510L,2026-02-27,PENDING_KYC
+CUST-1013,Arjun Gupta,arjun.gupta13@cloudindia.net,8373561090,"455, MG Road, Chennai",619782,WGOZL3709F,2026-08-05,PENDING_KYC
+CUST-1014,Priya Das,priya.das14@techcorp.io,6865413192,"757, Koramangala, New Delhi",294123,WDTGF0568O,2025-07-05,DORMANT
+CUST-1015,Rahul Singh,rahul.singh15@mailservice.in,6938583522,"448, Connaught Place, New Delhi",598272,AMRUU0229P,2025-07-10,VERIFIED
+CUST-1016,Kavita Reddy,kavita.reddy16@cloudindia.net,9858189935,"822, Ring Road, Mumbai",269908,XTKSE1704T,2026-08-13,PENDING_KYC
+CUST-1017,Aditya Sharma,aditya.sharma17@cloudindia.net,9222852321,"621, Park Street, Hyderabad",673520,FWMII7923W,2026-08-23,ACTIVE
+CUST-1018,Pooja Nair,pooja.nair18@mailservice.in,7441710141,"793, Connaught Place, Kolkata",601420,BEATK5636A,2026-05-09,ACTIVE
+CUST-1019,Vikram Iyer,vikram.iyer19@cloudindia.net,9871839789,"180, Ring Road, Hyderabad",200284,WSGRA6641L,2026-08-28,DORMANT
+CUST-1020,Pooja Iyer,pooja.iyer20@enterprise.org,6507306647,"249, Koramangala, Mumbai",418344,GLUOF8288B,2026-07-27,DORMANT
+CUST-1021,Kavita Das,kavita.das21@enterprise.org,6151645480,"465, Ring Road, Ahmedabad",316879,IKDPX7919H,2026-07-21,VERIFIED
+CUST-1022,Kavita Das,kavita.das22@example.com,6443191872,"258, Ring Road, Hyderabad",514423,XUBVK4724R,2026-06-06,VERIFIED
+CUST-1023,Arjun Chopra,arjun.chopra23@enterprise.org,8638461303,"504, Connaught Place, Kolkata",180670,TFDDO2834T,2026-06-06,PENDING_KYC
+CUST-1024,Neha Mehta,neha.mehta24@example.com,6219027877,"140, Park Street, New Delhi",657342,TFWFG2545R,2026-07-21,ACTIVE
+CUST-1025,Arjun Gupta,arjun.gupta25@enterprise.org,6327676715,"357, Ring Road, Ahmedabad",357560,NZZKQ0616M,2025-11-04,DORMANT
+CUST-1026,Sneha Sharma,sneha.sharma26@techcorp.io,6507545543,"811, Koramangala, Kolkata",320204,JFAEC6932H,2026-01-25,ACTIVE
+CUST-1027,Aditya Patel,aditya.patel27@mailservice.in,6500493091,"317, Connaught Place, Hyderabad",449962,SGJSB5486A,2026-01-20,DORMANT
+CUST-1028,Aarav Deshmukh,aarav.deshmukh28@example.com,9825557416,"601, Banjara Hills, Pune",596090,IFRKP3604N,2026-09-07,DORMANT
+CUST-1029,Aarav Patel,aarav.patel29@techcorp.io,8857388883,"670, Banjara Hills, Mumbai",412065,FGRES4968L,2026-08-17,DORMANT
+CUST-1030,Priya Reddy,priya.reddy30@cloudindia.net,7585497968,"695, Brigade Road, Chennai",411547,UNSKG0153P,2026-06-04,PENDING_KYC
+CUST-1031,Arjun Iyer,arjun.iyer31@cloudindia.net,9580428202,"699, Connaught Place, Hyderabad",238998,TSJYM8907H,2026-04-20,PENDING_KYC
+CUST-1032,Aditya Sharma,aditya.sharma32@cloudindia.net,7371859186,"360, MG Road, New Delhi",376231,AQNJV3251D,2026-09-04,ACTIVE
+CUST-1033,Sneha Reddy,sneha.reddy33@enterprise.org,8649939859,"456, MG Road, New Delhi",659765,QZYQR9577P,2026-08-01,ACTIVE
+CUST-1034,Neha Patel,neha.patel34@cloudindia.net,6803396999,"508, Ring Road, Ahmedabad",548455,KWGQA8228B,2025-07-01,ACTIVE
+CUST-1035,Priya Chopra,priya.chopra35@mailservice.in,8060893437,"95, Banjara Hills, Pune",552373,HMWZK4242X,2025-12-06,ACTIVE
+CUST-1036,Aditya Deshmukh,aditya.deshmukh36@cloudindia.net,9389794831,"305, Park Street, New Delhi",632116,IGBLP0628X,2025-11-11,DORMANT
+CUST-1037,Kavita Iyer,kavita.iyer37@enterprise.org,9159182114,"85, Banjara Hills, Mumbai",533357,PZGTG2549D,2026-02-02,DORMANT
+CUST-1038,Vikram Singh,vikram.singh38@cloudindia.net,9374393033,"97, Park Street, New Delhi",285200,FLHLI3706P,2025-08-05,ACTIVE
+CUST-1039,Rahul Sharma,rahul.sharma39@mailservice.in,6745047761,"120, Ring Road, Hyderabad",378115,UKOCK5870A,2025-11-27,VERIFIED
+CUST-1040,Neha Reddy,neha.reddy40@techcorp.io,8794759974,"919, Banjara Hills, Pune",623056,MESOC1856Z,2025-12-19,ACTIVE
+CUST-1041,Sneha Iyer,sneha.iyer41@enterprise.org,8699352412,"70, Koramangala, Chennai",477661,DBVTE0557K,2026-09-25,DORMANT
+CUST-1042,Rahul Nair,rahul.nair42@mailservice.in,8184178067,"748, Ring Road, Ahmedabad",131214,CBVIQ3114K,2026-07-15,PENDING_KYC
+CUST-1043,Kavita Reddy,kavita.reddy43@example.com,8938884517,"247, Park Street, Hyderabad",364194,PCPNE4937S,2026-06-12,PENDING_KYC
+CUST-1044,Rahul Mehta,rahul.mehta44@enterprise.org,6556510795,"886, MG Road, New Delhi",256117,OCKAP9179F,2026-08-04,DORMANT
+CUST-1045,Aditya Mehta,aditya.mehta45@example.com,7063721485,"412, Connaught Place, Bengaluru",359735,UIXML1761Z,2026-05-01,ACTIVE
+CUST-1046,Aditya Sharma,aditya.sharma46@example.com,6499243597,"16, Banjara Hills, Ahmedabad",507553,ZETFE3840W,2025-05-31,PENDING_KYC
+CUST-1047,Neha Singh,neha.singh47@techcorp.io,6640865627,"653, Brigade Road, Hyderabad",436601,TJXJP4101B,2026-06-18,DORMANT
+CUST-1048,Sneha Sharma,sneha.sharma48@cloudindia.net,6135671398,"549, Banjara Hills, Mumbai",134557,NOPWI0645R,2025-10-11,ACTIVE
+CUST-1049,Vikram Das,vikram.das49@cloudindia.net,6060517870,"642, MG Road, New Delhi",207492,QBWEH4676A,2025-07-08,ACTIVE
+CUST-1050,Sneha Nair,sneha.nair50@mailservice.in,6713332984,"811, Koramangala, Kolkata",165611,VSXFJ4912H,2025-08-02,ACTIVE
+CUST-1051,Priya Patel,priya.patel51@example.com,9711509175,"69, Ring Road, Pune",410393,QTOZY2380B,2025-05-31,VERIFIED
+CUST-1052,Aarav Nair,aarav.nair52@example.com,9351086264,"692, Park Street, Bengaluru",266340,OGBKL9680J,2026-05-25,VERIFIED
+CUST-1053,Pooja Chopra,pooja.chopra53@cloudindia.net,9515648789,"464, Connaught Place, New Delhi",428828,CCKNF9092C,2025-10-29,ACTIVE
+CUST-1054,Rohan Iyer,rohan.iyer54@cloudindia.net,8682030877,"153, MG Road, Hyderabad",522282,ZAOHR6206N,2026-07-05,VERIFIED
+CUST-1055,Arjun Das,arjun.das55@enterprise.org,8024364275,"367, Connaught Place, Bengaluru",262170,RJZHA1781B,2025-12-24,PENDING_KYC
+CUST-1056,Neha Chopra,neha.chopra56@enterprise.org,9870504236,"42, MG Road, Chennai",398478,KJDHO0044O,2025-09-30,PENDING_KYC
+CUST-1057,Aditya Singh,aditya.singh57@example.com,9250573260,"325, Banjara Hills, Pune",650139,CQZZI1100I,2026-01-17,PENDING_KYC
+CUST-1058,Neha Mehta,neha.mehta58@mailservice.in,7851668755,"731, Ring Road, Kolkata",535532,GOSEM8915M,2025-09-04,PENDING_KYC
+CUST-1059,Aditya Verma,aditya.verma59@mailservice.in,7842376042,"310, MG Road, Kolkata",617202,LEWTU4644K,2026-08-11,ACTIVE
+CUST-1060,Pooja Singh,pooja.singh60@example.com,9079929339,"530, Ring Road, Kolkata",631637,VTXMJ1266U,2025-07-30,ACTIVE
+CUST-1061,Rohan Sharma,rohan.sharma61@cloudindia.net,6220304184,"658, Ring Road, Pune",686250,WPXMK6020K,2025-11-30,ACTIVE
+CUST-1062,Neha Deshmukh,neha.deshmukh62@techcorp.io,8313334255,"833, Connaught Place, Bengaluru",263976,XXYAC6130D,2026-08-03,DORMANT
+CUST-1063,Vikram Das,vikram.das63@example.com,7446860967,"850, MG Road, Chennai",360443,VTFEO7939Z,2026-06-19,VERIFIED
+CUST-1064,Rahul Nair,rahul.nair64@enterprise.org,8332040195,"184, Koramangala, Mumbai",341732,IRXHI7331Y,2026-03-18,DORMANT
+CUST-1065,Sneha Mehta,sneha.mehta65@example.com,9336022330,"83, Connaught Place, Mumbai",690152,JWLPO6581W,2026-05-26,ACTIVE
+CUST-1066,Vikram Patel,vikram.patel66@cloudindia.net,8020672609,"230, Banjara Hills, Pune",133068,HODFG3373K,2026-08-16,VERIFIED
+CUST-1067,Kavita Verma,kavita.verma67@cloudindia.net,7079478576,"881, Koramangala, Hyderabad",666757,CTXQI6012B,2026-08-02,VERIFIED
+CUST-1068,Pooja Reddy,pooja.reddy68@techcorp.io,6715046637,"114, MG Road, Kolkata",634155,PKLHI1024X,2026-08-08,ACTIVE
+CUST-1069,Priya Chopra,priya.chopra69@techcorp.io,8569233184,"338, Koramangala, Ahmedabad",588078,XXKLD8293F,2026-08-10,DORMANT
+CUST-1070,Rohan Singh,rohan.singh70@cloudindia.net,7873487346,"207, Connaught Place, Ahmedabad",560022,ZHDKT7180H,2026-07-15,ACTIVE
+CUST-1071,Aditya Mehta,aditya.mehta71@enterprise.org,8582435964,"128, Ring Road, Chennai",275381,BWFOC6948E,2025-08-12,PENDING_KYC
+CUST-1072,Rahul Gupta,rahul.gupta72@mailservice.in,9949196064,"237, Brigade Road, Ahmedabad",209511,EETLO4138K,2026-01-17,PENDING_KYC
+CUST-1073,Ananya Singh,ananya.singh73@cloudindia.net,9939617962,"479, Ring Road, Hyderabad",493560,PCBPM0147N,2025-06-19,ACTIVE
+CUST-1074,Rohan Iyer,rohan.iyer74@techcorp.io,9560896501,"548, MG Road, Mumbai",406931,ZVELC8164X,2025-06-21,PENDING_KYC
+CUST-1075,Aarav Sharma,aarav.sharma75@mailservice.in,7036902251,"784, Koramangala, Kolkata",647884,AWRMR2721O,2026-05-02,ACTIVE
+CUST-1076,Aditya Chopra,aditya.chopra76@example.com,6862761970,"442, Koramangala, Ahmedabad",200866,TDQSN1974B,2026-04-15,ACTIVE
+CUST-1077,Aarav Verma,aarav.verma77@enterprise.org,8278259262,"880, MG Road, Kolkata",352976,GZGYN2606X,2025-10-08,ACTIVE
+CUST-1078,Priya Chopra,priya.chopra78@cloudindia.net,9642537738,"938, Banjara Hills, Pune",175915,HVECT0373Z,2026-06-24,ACTIVE
+CUST-1079,Kavita Verma,kavita.verma79@cloudindia.net,8289133430,"482, Banjara Hills, New Delhi",602059,TRAUE9725I,2026-07-08,PENDING_KYC
+CUST-1080,Vikram Deshmukh,vikram.deshmukh80@enterprise.org,6628272011,"793, Park Street, New Delhi",503956,DQHWP3829F,2026-01-25,ACTIVE
+CUST-1081,Rahul Sharma,rahul.sharma81@techcorp.io,8548301222,"542, Koramangala, Bengaluru",332274,DNWFR6753S,2025-07-08,VERIFIED
+CUST-1082,Aditya Patel,aditya.patel82@techcorp.io,9618650572,"160, Banjara Hills, New Delhi",391235,JLEUN9891B,2025-07-24,VERIFIED
+CUST-1083,Sneha Iyer,sneha.iyer83@example.com,6725114902,"472, MG Road, New Delhi",585818,QENSK5084W,2026-02-06,VERIFIED
+CUST-1084,Aditya Patel,aditya.patel84@mailservice.in,9615502644,"908, MG Road, Pune",523939,GNQWH3740Q,2025-07-26,DORMANT
+CUST-1085,Pooja Verma,pooja.verma85@enterprise.org,8190891184,"989, MG Road, Pune",531432,AOJSJ3983P,2025-07-22,ACTIVE
+CUST-1086,Aditya Verma,aditya.verma86@techcorp.io,8065200991,"675, Koramangala, Ahmedabad",192051,IJTDT3172G,2026-09-03,VERIFIED
+CUST-1087,Pooja Reddy,pooja.reddy87@enterprise.org,9770801715,"285, Connaught Place, Mumbai",160547,BNQJT0597G,2025-06-20,VERIFIED
+CUST-1088,Priya Deshmukh,priya.deshmukh88@example.com,9585928052,"81, Connaught Place, Bengaluru",193128,JRXUM2601K,2025-09-25,ACTIVE
+CUST-1089,Sneha Deshmukh,sneha.deshmukh89@cloudindia.net,6249511455,"221, MG Road, Mumbai",153023,SGNHG7878I,2026-09-02,PENDING_KYC
+CUST-1090,Pooja Gupta,pooja.gupta90@cloudindia.net,6184029084,"427, Ring Road, Pune",560195,MTKAZ0105Z,2025-07-10,PENDING_KYC
+CUST-1091,Priya Das,priya.das91@mailservice.in,9781606332,"692, Banjara Hills, Kolkata",312554,BVYHN2268T,2025-06-23,ACTIVE
+CUST-1092,Vikram Gupta,vikram.gupta92@cloudindia.net,6628067764,"918, Brigade Road, New Delhi",211633,GKXDP5063A,2026-06-25,DORMANT
+CUST-1093,Pooja Iyer,pooja.iyer93@mailservice.in,6645460459,"261, Park Street, Hyderabad",571447,SATCJ0201L,2025-06-16,ACTIVE
+CUST-1094,Rahul Reddy,rahul.reddy94@techcorp.io,6567251347,"847, Ring Road, New Delhi",541134,WOTLE7609P,2026-05-14,ACTIVE
+CUST-1095,Priya Mehta,priya.mehta95@example.com,7345252097,"887, Brigade Road, Ahmedabad",692452,BDWOL6704X,2026-05-05,PENDING_KYC
+CUST-1096,Arjun Reddy,arjun.reddy96@example.com,7053445884,"239, Ring Road, Pune",150159,EAQTW9433X,2026-06-28,DORMANT
+CUST-1097,Kavita Verma,kavita.verma97@enterprise.org,9524433087,"216, Brigade Road, Mumbai",446380,JFDIC5997V,2026-03-15,ACTIVE
+CUST-1098,Pooja Verma,pooja.verma98@enterprise.org,9554790510,"109, Ring Road, Pune",579889,VMKMW5617R,2026-02-25,ACTIVE
+CUST-1099,Ananya Sharma,ananya.sharma99@enterprise.org,9349927314,"910, Banjara Hills, Bengaluru",111056,PAGDN6574U,2026-03-12,ACTIVE
+CUST-1100,Vikram Reddy,vikram.reddy100@cloudindia.net,8879758438,"217, Banjara Hills, Pune",393986,NQTKL0545Q,2025-12-25,PENDING_KYC
+CUST-1101,Kavita Mehta,kavita.mehta101@techcorp.io,6047981155,"821, Connaught Place, Mumbai",147477,JXLYT1927C,2026-04-25,VERIFIED
+CUST-1102,Aarav Nair,aarav.nair102@mailservice.in,7509385032,"424, Ring Road, New Delhi",682740,YEVZO9984A,2026-02-21,ACTIVE
+CUST-1103,Sneha Nair,sneha.nair103@example.com,9624100827,"78, Banjara Hills, Ahmedabad",433101,NLUJR5275J,2026-04-20,PENDING_KYC
+CUST-1104,Vikram Singh,vikram.singh104@cloudindia.net,6045825642,"855, MG Road, Kolkata",149588,TZUIW3039T,2026-06-07,ACTIVE
+CUST-1105,Neha Verma,neha.verma105@mailservice.in,7545286881,"918, Park Street, Hyderabad",203640,KTIAU9095L,2026-03-25,DORMANT
+CUST-1106,Vikram Sharma,vikram.sharma106@mailservice.in,9681719185,"478, Koramangala, Bengaluru",197175,VBOGF9902T,2026-04-30,VERIFIED
+CUST-1107,Neha Das,neha.das107@cloudindia.net,7532262293,"845, Ring Road, Hyderabad",643840,MBBZO8500L,2026-01-11,DORMANT
+CUST-1108,Vikram Singh,vikram.singh108@techcorp.io,6079143096,"917, Park Street, Chennai",302615,TIORI6757O,2025-12-01,VERIFIED
+CUST-1109,Aarav Mehta,aarav.mehta109@example.com,7739910154,"126, Koramangala, Chennai",208771,FCEDW1183Q,2026-08-31,ACTIVE
+CUST-1110,Aditya Das,aditya.das110@techcorp.io,7593013493,"188, Connaught Place, Chennai",375711,AUBOJ6037T,2026-08-06,ACTIVE
+CUST-1111,Rahul Verma,rahul.verma111@techcorp.io,6686453549,"262, Ring Road, New Delhi",267181,NGXVM5773G,2026-06-20,PENDING_KYC
+CUST-1112,Ananya Verma,ananya.verma112@example.com,9702103561,"462, Koramangala, Chennai",530160,SVWKC3045L,2025-09-16,VERIFIED
+CUST-1113,Aditya Das,aditya.das113@cloudindia.net,7709599304,"829, MG Road, Hyderabad",133590,CEXKQ6787A,2025-08-07,PENDING_KYC
+CUST-1114,Vikram Chopra,vikram.chopra114@techcorp.io,9054619589,"997, Park Street, Bengaluru",333786,ZVPXS1096N,2025-08-09,PENDING_KYC
+CUST-1115,Sneha Patel,sneha.patel115@cloudindia.net,8232710416,"427, Connaught Place, New Delhi",556072,URUQI9421M,2025-06-02,PENDING_KYC
+CUST-1116,Aditya Iyer,aditya.iyer116@enterprise.org,9780303967,"691, Ring Road, Mumbai",569263,PSPOV2444S,2026-05-10,ACTIVE
+CUST-1117,Arjun Patel,arjun.patel117@cloudindia.net,6420123766,"82, MG Road, Kolkata",626303,DGHNT3513G,2026-08-02,VERIFIED
+CUST-1118,Rahul Nair,rahul.nair118@example.com,9125236789,"413, Banjara Hills, New Delhi",379092,NZTOV9726F,2026-02-15,ACTIVE
+CUST-1119,Sneha Iyer,sneha.iyer119@example.com,6143958541,"941, Connaught Place, Hyderabad",257627,YQWBV5614H,2025-09-16,ACTIVE
+CUST-1120,Rahul Verma,rahul.verma120@enterprise.org,8571705673,"338, Brigade Road, Chennai",649221,HOVQR4423Z,2026-01-20,PENDING_KYC

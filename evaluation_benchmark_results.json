@@ -1,0 +1,603 @@
+{
+  "evaluation_summary": {
+    "total_ground_truth_samples": 66,
+    "matched_evaluated_samples": 66,
+    "unmatched_samples": 0,
+    "macro_precision": 0.9418,
+    "macro_recall": 0.9667,
+    "macro_f1_score": 0.9541,
+    "macro_precision_percent": 94.18,
+    "macro_recall_percent": 96.67,
+    "macro_f1_percent": 95.41,
+    "micro_precision": 0.9143,
+    "micro_recall": 0.9697,
+    "micro_f1_score": 0.9412,
+    "non_pii_specificity_percent": 93.94
+  },
+  "per_class_metrics": {
+    "Direct_Personal_Identifiers": {
+      "display_name": "Direct Personal Identifiers",
+      "true_positives": 7,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "true_negatives": 59,
+      "support": 7,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "precision_percent": 100.0,
+      "recall_percent": 100.0,
+      "f1_percent": 100.0
+    },
+    "Contact_Location_Data": {
+      "display_name": "Contact Location Data",
+      "true_positives": 10,
+      "false_positives": 1,
+      "false_negatives": 0,
+      "true_negatives": 55,
+      "support": 10,
+      "precision": 0.9091,
+      "recall": 1.0,
+      "f1_score": 0.9524,
+      "precision_percent": 90.91,
+      "recall_percent": 100.0,
+      "f1_percent": 95.24
+    },
+    "Government_National_IDs": {
+      "display_name": "Government National IDs",
+      "true_positives": 2,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "true_negatives": 64,
+      "support": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "precision_percent": 100.0,
+      "recall_percent": 100.0,
+      "f1_percent": 100.0
+    },
+    "Financial_Banking_Data": {
+      "display_name": "Financial Banking Data",
+      "true_positives": 5,
+      "false_positives": 0,
+      "false_negatives": 1,
+      "true_negatives": 60,
+      "support": 6,
+      "precision": 1.0,
+      "recall": 0.8333,
+      "f1_score": 0.9091,
+      "precision_percent": 100.0,
+      "recall_percent": 83.33,
+      "f1_percent": 90.91
+    },
+    "Authentication_Digital_Telemetry": {
+      "display_name": "Authentication Digital Telemetry",
+      "true_positives": 8,
+      "false_positives": 2,
+      "false_negatives": 0,
+      "true_negatives": 56,
+      "support": 8,
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1_score": 0.8889,
+      "precision_percent": 80.0,
+      "recall_percent": 100.0,
+      "f1_percent": 88.89
+    }
+  },
+  "confusion_matrix": {
+    "Direct_Personal_Identifiers": {
+      "Direct_Personal_Identifiers": 7,
+      "Contact_Location_Data": 0,
+      "Government_National_IDs": 0,
+      "Financial_Banking_Data": 0,
+      "Authentication_Digital_Telemetry": 0,
+      "Non_PII": 0
+    },
+    "Contact_Location_Data": {
+      "Direct_Personal_Identifiers": 0,
+      "Contact_Location_Data": 10,
+      "Government_National_IDs": 0,
+      "Financial_Banking_Data": 0,
+      "Authentication_Digital_Telemetry": 0,
+      "Non_PII": 0
+    },
+    "Government_National_IDs": {
+      "Direct_Personal_Identifiers": 0,
+      "Contact_Location_Data": 0,
+      "Government_National_IDs": 2,
+      "Financial_Banking_Data": 0,
+      "Authentication_Digital_Telemetry": 0,
+      "Non_PII": 0
+    },
+    "Financial_Banking_Data": {
+      "Direct_Personal_Identifiers": 0,
+      "Contact_Location_Data": 1,
+      "Government_National_IDs": 0,
+      "Financial_Banking_Data": 5,
+      "Authentication_Digital_Telemetry": 0,
+      "Non_PII": 0
+    },
+    "Authentication_Digital_Telemetry": {
+      "Direct_Personal_Identifiers": 0,
+      "Contact_Location_Data": 0,
+      "Government_National_IDs": 0,
+      "Financial_Banking_Data": 0,
+      "Authentication_Digital_Telemetry": 8,
+      "Non_PII": 0
+    },
+    "Non_PII": {
+      "Direct_Personal_Identifiers": 0,
+      "Contact_Location_Data": 0,
+      "Government_National_IDs": 0,
+      "Financial_Banking_Data": 0,
+      "Authentication_Digital_Telemetry": 2,
+      "Non_PII": 31
+    }
+  },
+  "sample_predictions": [
+    {
+      "dataset_name": "customers.csv",
+      "field_name": "customer_id",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "customers.csv",
+      "field_name": "full_name",
+      "actual_class": "Direct_Personal_Identifiers",
+      "predicted_class": "Direct_Personal_Identifiers",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "customers.csv",
+      "field_name": "email_address",
+      "actual_class": "Contact_Location_Data",
+      "predicted_class": "Contact_Location_Data",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "customers.csv",
+      "field_name": "phone_number",
+      "actual_class": "Contact_Location_Data",
+      "predicted_class": "Contact_Location_Data",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "customers.csv",
+      "field_name": "residential_address",
+      "actual_class": "Contact_Location_Data",
+      "predicted_class": "Contact_Location_Data",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "customers.csv",
+      "field_name": "pin_code",
+      "actual_class": "Contact_Location_Data",
+      "predicted_class": "Contact_Location_Data",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "customers.csv",
+      "field_name": "pan_card_no",
+      "actual_class": "Government_National_IDs",
+      "predicted_class": "Government_National_IDs",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "customers.csv",
+      "field_name": "created_date",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "customers.csv",
+      "field_name": "account_status",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "hr_employees.csv",
+      "field_name": "emp_id",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "hr_employees.csv",
+      "field_name": "employee_name",
+      "actual_class": "Direct_Personal_Identifiers",
+      "predicted_class": "Direct_Personal_Identifiers",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "hr_employees.csv",
+      "field_name": "dob",
+      "actual_class": "Direct_Personal_Identifiers",
+      "predicted_class": "Direct_Personal_Identifiers",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "hr_employees.csv",
+      "field_name": "aadhaar_number",
+      "actual_class": "Government_National_IDs",
+      "predicted_class": "Government_National_IDs",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "hr_employees.csv",
+      "field_name": "bank_account_no",
+      "actual_class": "Financial_Banking_Data",
+      "predicted_class": "Financial_Banking_Data",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "hr_employees.csv",
+      "field_name": "ifsc_code",
+      "actual_class": "Financial_Banking_Data",
+      "predicted_class": "Financial_Banking_Data",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "hr_employees.csv",
+      "field_name": "salary_ctc",
+      "actual_class": "Financial_Banking_Data",
+      "predicted_class": "Contact_Location_Data",
+      "is_correct": false
+    },
+    {
+      "dataset_name": "hr_employees.csv",
+      "field_name": "department",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "support_tickets.csv",
+      "field_name": "ticket_id",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "support_tickets.csv",
+      "field_name": "reporter_email",
+      "actual_class": "Contact_Location_Data",
+      "predicted_class": "Contact_Location_Data",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "support_tickets.csv",
+      "field_name": "customer_ip",
+      "actual_class": "Authentication_Digital_Telemetry",
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "support_tickets.csv",
+      "field_name": "device_id",
+      "actual_class": "Authentication_Digital_Telemetry",
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "support_tickets.csv",
+      "field_name": "issue_description",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "support_tickets.csv",
+      "field_name": "resolution_status",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "support_tickets.csv",
+      "field_name": "priority_level",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "financial_transactions.csv",
+      "field_name": "txn_id",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "financial_transactions.csv",
+      "field_name": "credit_card_mask",
+      "actual_class": "Financial_Banking_Data",
+      "predicted_class": "Financial_Banking_Data",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "financial_transactions.csv",
+      "field_name": "upi_vpa",
+      "actual_class": "Financial_Banking_Data",
+      "predicted_class": "Financial_Banking_Data",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "financial_transactions.csv",
+      "field_name": "amount_inr",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "financial_transactions.csv",
+      "field_name": "txn_timestamp",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "financial_transactions.csv",
+      "field_name": "merchant_category_code",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "telemetry_logs.csv",
+      "field_name": "log_id",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "telemetry_logs.csv",
+      "field_name": "client_ip",
+      "actual_class": "Authentication_Digital_Telemetry",
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "telemetry_logs.csv",
+      "field_name": "mac_address",
+      "actual_class": "Authentication_Digital_Telemetry",
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "telemetry_logs.csv",
+      "field_name": "session_token",
+      "actual_class": "Authentication_Digital_Telemetry",
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "telemetry_logs.csv",
+      "field_name": "http_status",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "telemetry_logs.csv",
+      "field_name": "bytes_transferred",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:users",
+      "field_name": "id",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:users",
+      "field_name": "full_name",
+      "actual_class": "Direct_Personal_Identifiers",
+      "predicted_class": "Direct_Personal_Identifiers",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:users",
+      "field_name": "user_id_email",
+      "actual_class": "Contact_Location_Data",
+      "predicted_class": "Contact_Location_Data",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:users",
+      "field_name": "phone_number",
+      "actual_class": "Contact_Location_Data",
+      "predicted_class": "Contact_Location_Data",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:users",
+      "field_name": "password_hash",
+      "actual_class": "Authentication_Digital_Telemetry",
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:users",
+      "field_name": "role",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:billing_details",
+      "field_name": "billing_id",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:billing_details",
+      "field_name": "user_id",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:billing_details",
+      "field_name": "credit_card_mask",
+      "actual_class": "Financial_Banking_Data",
+      "predicted_class": "Financial_Banking_Data",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:billing_details",
+      "field_name": "billing_address",
+      "actual_class": "Contact_Location_Data",
+      "predicted_class": "Contact_Location_Data",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:billing_details",
+      "field_name": "billing_pincode",
+      "actual_class": "Contact_Location_Data",
+      "predicted_class": "Contact_Location_Data",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:billing_details",
+      "field_name": "currency",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:patient_records",
+      "field_name": "patient_id",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:patient_records",
+      "field_name": "patient_name",
+      "actual_class": "Direct_Personal_Identifiers",
+      "predicted_class": "Direct_Personal_Identifiers",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:patient_records",
+      "field_name": "dob",
+      "actual_class": "Direct_Personal_Identifiers",
+      "predicted_class": "Direct_Personal_Identifiers",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:patient_records",
+      "field_name": "gender",
+      "actual_class": "Direct_Personal_Identifiers",
+      "predicted_class": "Direct_Personal_Identifiers",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:patient_records",
+      "field_name": "emergency_contact_phone",
+      "actual_class": "Contact_Location_Data",
+      "predicted_class": "Contact_Location_Data",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:patient_records",
+      "field_name": "blood_group",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:patient_records",
+      "field_name": "admission_notes",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:auth_sessions",
+      "field_name": "session_id",
+      "actual_class": "Non_PII",
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "is_correct": false
+    },
+    {
+      "dataset_name": "enterprise.db:auth_sessions",
+      "field_name": "user_id",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:auth_sessions",
+      "field_name": "client_ip_address",
+      "actual_class": "Authentication_Digital_Telemetry",
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:auth_sessions",
+      "field_name": "user_agent_token",
+      "actual_class": "Authentication_Digital_Telemetry",
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:auth_sessions",
+      "field_name": "login_time",
+      "actual_class": "Non_PII",
+      "predicted_class": "Authentication_Digital_Telemetry",
+      "is_correct": false
+    },
+    {
+      "dataset_name": "enterprise.db:inventory_products",
+      "field_name": "product_id",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:inventory_products",
+      "field_name": "sku_code",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:inventory_products",
+      "field_name": "unit_price",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:inventory_products",
+      "field_name": "stock_quantity",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:inventory_products",
+      "field_name": "warehouse_bay",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    },
+    {
+      "dataset_name": "enterprise.db:inventory_products",
+      "field_name": "reorder_threshold",
+      "actual_class": "Non_PII",
+      "predicted_class": "Non_PII",
+      "is_correct": true
+    }
+  ]
+}

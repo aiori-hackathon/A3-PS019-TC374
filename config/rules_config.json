@@ -1,0 +1,111 @@
+{
+  "classes": {
+    "Direct_Personal_Identifiers": {
+      "display_name": "Direct Personal Identifiers",
+      "description": "Information that explicitly identifies an individual on its own or with basic context (Names, Birthdates, Demographics).",
+      "header_patterns": [
+        "(?i)^.*(name|full_?name|first_?name|last_?name|fname|lname|surname|cust_?name|patient_?name|employee_?name).*$",
+        "(?i)^.*(dob|date_?of_?birth|birth_?date|birth_?day|gender|sex|marital_?status|mother_?maiden).*$"
+      ],
+      "value_patterns": [
+        "^[A-Z][a-zA-Z'.-]+(?:\\s+[A-Z][a-zA-Z'.-]+)+$",
+        "^(19|20)\\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$",
+        "^(0[1-9]|[12]\\d|3[01])/(0[1-9]|1[0-2])/(19|20)\\d{2}$",
+        "^(Male|Female|Non-Binary|Other|M|F)$"
+      ],
+      "weights": {
+        "header_weight": 0.60,
+        "value_weight": 0.40
+      },
+      "min_confidence_threshold": 0.50
+    },
+    "Contact_Location_Data": {
+      "display_name": "Contact & Location Data",
+      "description": "Geographic coordinates, physical mailing addresses, telephone numbers, and email communication handles.",
+      "header_patterns": [
+        "(?i)^.*(email|e_?mail|mail_?address|contact_?email|reporter_?email|user_?id_?email).*$",
+        "(?i)^.*(phone|tel|mobile|cell|contact_?no|phone_?num|emergency_?contact).*$",
+        "(?i)^.*(address|street|addr|residence|house_?no|flat_?no|apartment|billing_?address).*$",
+        "(?i)^.*(postal|zip|zip_?code|pincode|pin_?code|billing_?pincode|gps|latitude|longitude|lat_?long).*$"
+      ],
+      "value_patterns": [
+        "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+        "^(\\+?\\d{1,3}[- ]?)?\\(?\\d{3}\\)?[- ]?\\d{3}[- ]?\\d{4}$",
+        "^[6-9]\\d{9}$",
+        "^[1-9][0-9]{5}$",
+        "^[0-9]+,\\s*[A-Za-z0-9\\s,.-]+$"
+      ],
+      "weights": {
+        "header_weight": 0.50,
+        "value_weight": 0.50
+      },
+      "min_confidence_threshold": 0.50
+    },
+    "Government_National_IDs": {
+      "display_name": "Government & National IDs",
+      "description": "Statutory identifiers issued by national sovereign authorities (e.g., Aadhaar, PAN, Passport, SSN).",
+      "header_patterns": [
+        "(?i)^.*(aadhaar|aadhar|uidai|uid_?num).*$",
+        "(?i)^.*(pan|pan_?card|pan_?num|tax_?id|ssn|social_?security).*$",
+        "(?i)^.*(passport|passport_?no|voter_?id|epic_?no|national_?id).*$"
+      ],
+      "value_patterns": [
+        "^[2-9]{1}[0-9]{3}\\s?[0-9]{4}\\s?[0-9]{4}$",
+        "^[A-Z]{5}[0-9]{4}[A-Z]{1}$",
+        "^[A-PR-WYa-pr-wy][1-9]\\d\\s?\\d{4}[1-9]$",
+        "^\\d{3}-\\d{2}-\\d{4}$"
+      ],
+      "weights": {
+        "header_weight": 0.50,
+        "value_weight": 0.50
+      },
+      "min_confidence_threshold": 0.50
+    },
+    "Financial_Banking_Data": {
+      "display_name": "Financial & Banking Data",
+      "description": "Payment instrument identifiers, bank account records, financial compensation, and card security codes.",
+      "header_patterns": [
+        "(?i)^.*(card_?num|credit_?card|debit_?card|cc_?num|card_?no|credit_?card_?mask).*$",
+        "(?i)^.*(bank_?acc|account_?no|acc_?num|iban|ifsc|ifsc_?code|swift).*$",
+        "(?i)^.*(salary|compensation|ctc|income|cvv|cvv2|upi|vpa).*$"
+      ],
+      "value_patterns": [
+        "^4[0-9]{12}(?:[0-9]{3})?$",
+        "^5[1-5][0-9]{14}$",
+        "^\\d{4}[- ]?(?:\\d{4}|XXXX)[- ]?(?:\\d{4}|XXXX)[- ]?\\d{4}$",
+        "^[A-Z]{4}0[A-Z0-9]{6}$",
+        "^[a-zA-Z0-9.\\-_]{2,256}@[a-zA-Z]{2,64}$",
+        "^\\d{9,18}$"
+      ],
+      "weights": {
+        "header_weight": 0.50,
+        "value_weight": 0.50
+      },
+      "min_confidence_threshold": 0.50
+    },
+    "Authentication_Digital_Telemetry": {
+      "display_name": "Digital Identity & Telemetry",
+      "description": "Network artifacts, device fingerprints, credential hashes, and user login handles.",
+      "header_patterns": [
+        "(?i)^.*(ip_?addr|ipv4|ipv6|client_?ip|remote_?addr|customer_?ip).*$",
+        "(?i)^.*(mac_?addr|mac|hardware_?id|device_?id|device_?fingerprint).*$",
+        "(?i)^.*(password_?hash|pwd_?hash|passwd|token|session_?token|session_?id|auth_?token|username|login|user_?agent_?token).*$"
+      ],
+      "value_patterns": [
+        "^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$",
+        "^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$",
+        "^(\\$2[ayb]\\$.{56}|[a-fA-F0-9]{32}|[a-fA-F0-9]{64}|sess_.*|Mozilla.*)$",
+        "^([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}|dev-uuid-.*)$"
+      ],
+      "weights": {
+        "header_weight": 0.50,
+        "value_weight": 0.50
+      },
+      "min_confidence_threshold": 0.50
+    }
+  },
+  "sampling": {
+    "sample_row_limit": 100,
+    "min_sample_match_ratio": 0.20
+  }
+}

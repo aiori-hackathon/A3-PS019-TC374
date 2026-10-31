@@ -1,0 +1,81 @@
+ticket_id,reporter_email,customer_ip,device_id,issue_description,resolution_status,priority_level
+TCK-2001,user_1@cloudindia.net,108.79.194.180,dev-uuid-3921-663,Password reset link expired,IN_PROGRESS,LOW
+TCK-2002,user_2@example.com,144.215.250.214,dev-uuid-6604-777,Payment timeout error,OPEN,HIGH
+TCK-2003,user_3@enterprise.org,156.246.67.159,dev-uuid-8445-333,Login failed on mobile app,OPEN,HIGH
+TCK-2004,user_4@enterprise.org,17.127.212.131,dev-uuid-7393-326,Password reset link expired,CLOSED,HIGH
+TCK-2005,user_5@enterprise.org,79.237.165.43,dev-uuid-8172-229,Address update pending,CLOSED,HIGH
+TCK-2006,user_6@enterprise.org,204.111.47.58,dev-uuid-4501-353,Address update pending,OPEN,MEDIUM
+TCK-2007,user_7@techcorp.io,211.211.190.188,dev-uuid-6489-565,Login failed on mobile app,IN_PROGRESS,CRITICAL
+TCK-2008,user_8@techcorp.io,223.115.164.130,dev-uuid-6106-448,Payment timeout error,CLOSED,CRITICAL
+TCK-2009,user_9@techcorp.io,194.158.236.31,dev-uuid-7744-358,Password reset link expired,CLOSED,CRITICAL
+TCK-2010,user_10@enterprise.org,223.189.63.232,dev-uuid-2801-671,Login failed on mobile app,RESOLVED,LOW
+TCK-2011,user_11@cloudindia.net,92.11.9.57,dev-uuid-9361-226,Address update pending,IN_PROGRESS,CRITICAL
+TCK-2012,user_12@techcorp.io,149.187.115.170,dev-uuid-8756-677,Address update pending,OPEN,CRITICAL
+TCK-2013,user_13@cloudindia.net,95.241.41.62,dev-uuid-5245-721,Address update pending,OPEN,HIGH
+TCK-2014,user_14@techcorp.io,110.49.98.112,dev-uuid-2980-838,Payment timeout error,IN_PROGRESS,CRITICAL
+TCK-2015,user_15@techcorp.io,20.6.240.14,dev-uuid-4591-924,Password reset link expired,CLOSED,MEDIUM
+TCK-2016,user_16@enterprise.org,205.30.29.168,dev-uuid-8275-743,Payment timeout error,OPEN,HIGH
+TCK-2017,user_17@cloudindia.net,47.27.6.156,dev-uuid-5145-669,Payment timeout error,CLOSED,HIGH
+TCK-2018,user_18@techcorp.io,214.182.184.72,dev-uuid-9375-549,Payment timeout error,RESOLVED,MEDIUM
+TCK-2019,user_19@cloudindia.net,138.110.90.48,dev-uuid-8520-962,Password reset link expired,CLOSED,LOW
+TCK-2020,user_20@cloudindia.net,151.67.157.88,dev-uuid-8710-239,Password reset link expired,OPEN,LOW
+TCK-2021,user_21@mailservice.in,82.205.36.67,dev-uuid-4167-701,Login failed on mobile app,RESOLVED,HIGH
+TCK-2022,user_22@enterprise.org,219.62.117.89,dev-uuid-4251-723,Address update pending,OPEN,CRITICAL
+TCK-2023,user_23@techcorp.io,90.139.193.172,dev-uuid-5777-710,Login failed on mobile app,OPEN,LOW
+TCK-2024,user_24@cloudindia.net,126.59.221.16,dev-uuid-7198-935,Payment timeout error,OPEN,LOW
+TCK-2025,user_25@example.com,197.63.250.84,dev-uuid-8454-978,Address update pending,CLOSED,LOW
+TCK-2026,user_26@example.com,29.135.66.25,dev-uuid-4131-713,Payment timeout error,RESOLVED,HIGH
+TCK-2027,user_27@mailservice.in,114.22.212.22,dev-uuid-2068-728,Password reset link expired,OPEN,CRITICAL
+TCK-2028,user_28@enterprise.org,22.37.242.21,dev-uuid-3720-230,Password reset link expired,OPEN,HIGH
+TCK-2029,user_29@cloudindia.net,142.147.6.103,dev-uuid-7346-228,Address update pending,OPEN,MEDIUM
+TCK-2030,user_30@mailservice.in,191.163.171.204,dev-uuid-4967-455,Payment timeout error,OPEN,HIGH
+TCK-2031,user_31@example.com,160.222.36.177,dev-uuid-8377-101,Address update pending,RESOLVED,HIGH
+TCK-2032,user_32@techcorp.io,95.124.121.223,dev-uuid-3669-863,Address update pending,IN_PROGRESS,MEDIUM
+TCK-2033,user_33@mailservice.in,97.42.57.245,dev-uuid-5179-412,Payment timeout error,CLOSED,MEDIUM
+TCK-2034,user_34@mailservice.in,30.125.174.203,dev-uuid-9585-830,Payment timeout error,CLOSED,HIGH
+TCK-2035,user_35@techcorp.io,121.63.168.240,dev-uuid-9328-289,Payment timeout error,RESOLVED,CRITICAL
+TCK-2036,user_36@example.com,49.247.158.193,dev-uuid-4295-328,Address update pending,CLOSED,LOW
+TCK-2037,user_37@enterprise.org,61.160.237.130,dev-uuid-4924-491,Address update pending,OPEN,CRITICAL
+TCK-2038,user_38@cloudindia.net,211.77.117.128,dev-uuid-1310-851,Password reset link expired,OPEN,HIGH
+TCK-2039,user_39@techcorp.io,48.46.23.135,dev-uuid-7902-611,Login failed on mobile app,IN_PROGRESS,CRITICAL
+TCK-2040,user_40@enterprise.org,51.219.91.71,dev-uuid-8652-698,Address update pending,RESOLVED,HIGH
+TCK-2041,user_41@cloudindia.net,160.21.221.221,dev-uuid-2010-418,Address update pending,OPEN,MEDIUM
+TCK-2042,user_42@example.com,179.248.68.224,dev-uuid-1388-633,Login failed on mobile app,RESOLVED,LOW
+TCK-2043,user_43@mailservice.in,24.95.9.201,dev-uuid-6037-991,Address update pending,IN_PROGRESS,LOW
+TCK-2044,user_44@cloudindia.net,29.136.232.145,dev-uuid-5020-597,Login failed on mobile app,CLOSED,LOW
+TCK-2045,user_45@cloudindia.net,214.17.195.7,dev-uuid-7740-109,Address update pending,CLOSED,LOW
+TCK-2046,user_46@mailservice.in,163.159.251.242,dev-uuid-1138-284,Payment timeout error,CLOSED,HIGH
+TCK-2047,user_47@cloudindia.net,100.181.143.180,dev-uuid-9364-783,Payment timeout error,IN_PROGRESS,CRITICAL
+TCK-2048,user_48@example.com,132.3.229.216,dev-uuid-1664-622,Login failed on mobile app,RESOLVED,MEDIUM
+TCK-2049,user_49@mailservice.in,56.180.36.138,dev-uuid-7468-772,Login failed on mobile app,IN_PROGRESS,LOW
+TCK-2050,user_50@cloudindia.net,89.91.143.59,dev-uuid-6058-462,Address update pending,OPEN,CRITICAL
+TCK-2051,user_51@cloudindia.net,99.176.132.89,dev-uuid-1048-681,Password reset link expired,RESOLVED,CRITICAL
+TCK-2052,user_52@example.com,45.108.219.236,dev-uuid-5084-721,Address update pending,IN_PROGRESS,MEDIUM
+TCK-2053,user_53@enterprise.org,195.101.123.187,dev-uuid-3103-732,Password reset link expired,OPEN,CRITICAL
+TCK-2054,user_54@cloudindia.net,68.233.63.23,dev-uuid-6576-815,Payment timeout error,CLOSED,HIGH
+TCK-2055,user_55@techcorp.io,69.79.23.14,dev-uuid-6953-269,Password reset link expired,IN_PROGRESS,LOW
+TCK-2056,user_56@techcorp.io,221.52.209.35,dev-uuid-9407-674,Payment timeout error,IN_PROGRESS,LOW
+TCK-2057,user_57@techcorp.io,216.71.203.199,dev-uuid-9562-855,Address update pending,CLOSED,MEDIUM
+TCK-2058,user_58@techcorp.io,125.242.184.136,dev-uuid-9850-992,Address update pending,RESOLVED,LOW
+TCK-2059,user_59@enterprise.org,206.128.44.75,dev-uuid-3890-407,Password reset link expired,RESOLVED,HIGH
+TCK-2060,user_60@example.com,86.72.108.99,dev-uuid-7483-812,Password reset link expired,IN_PROGRESS,LOW
+TCK-2061,user_61@mailservice.in,120.170.93.178,dev-uuid-5540-107,Login failed on mobile app,RESOLVED,HIGH
+TCK-2062,user_62@techcorp.io,180.92.160.220,dev-uuid-8621-272,Login failed on mobile app,IN_PROGRESS,MEDIUM
+TCK-2063,user_63@example.com,98.16.192.252,dev-uuid-2390-388,Payment timeout error,CLOSED,HIGH
+TCK-2064,user_64@example.com,70.164.88.79,dev-uuid-2127-722,Payment timeout error,OPEN,LOW
+TCK-2065,user_65@techcorp.io,85.70.139.14,dev-uuid-6911-151,Login failed on mobile app,OPEN,MEDIUM
+TCK-2066,user_66@example.com,79.48.226.113,dev-uuid-9433-854,Password reset link expired,CLOSED,HIGH
+TCK-2067,user_67@cloudindia.net,223.247.57.201,dev-uuid-7443-601,Payment timeout error,IN_PROGRESS,HIGH
+TCK-2068,user_68@cloudindia.net,144.226.142.192,dev-uuid-6267-145,Login failed on mobile app,CLOSED,CRITICAL
+TCK-2069,user_69@enterprise.org,161.215.65.235,dev-uuid-8848-654,Address update pending,OPEN,HIGH
+TCK-2070,user_70@cloudindia.net,132.75.145.232,dev-uuid-1677-678,Payment timeout error,IN_PROGRESS,MEDIUM
+TCK-2071,user_71@enterprise.org,157.97.128.123,dev-uuid-5353-758,Payment timeout error,OPEN,HIGH
+TCK-2072,user_72@techcorp.io,168.185.157.156,dev-uuid-8824-685,Payment timeout error,CLOSED,LOW
+TCK-2073,user_73@enterprise.org,82.205.199.117,dev-uuid-2507-755,Login failed on mobile app,OPEN,MEDIUM
+TCK-2074,user_74@cloudindia.net,24.227.147.202,dev-uuid-1994-145,Login failed on mobile app,CLOSED,MEDIUM
+TCK-2075,user_75@mailservice.in,135.69.199.254,dev-uuid-3403-998,Login failed on mobile app,CLOSED,LOW
+TCK-2076,user_76@mailservice.in,106.212.224.177,dev-uuid-1680-188,Password reset link expired,OPEN,CRITICAL
+TCK-2077,user_77@cloudindia.net,216.23.145.98,dev-uuid-9793-475,Address update pending,IN_PROGRESS,CRITICAL
+TCK-2078,user_78@enterprise.org,157.170.188.173,dev-uuid-6673-871,Login failed on mobile app,OPEN,LOW
+TCK-2079,user_79@mailservice.in,196.209.122.5,dev-uuid-3855-433,Address update pending,CLOSED,HIGH
+TCK-2080,user_80@cloudindia.net,215.24.81.61,dev-uuid-4260-881,Password reset link expired,IN_PROGRESS,CRITICAL

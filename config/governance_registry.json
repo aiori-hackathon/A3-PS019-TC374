@@ -1,0 +1,105 @@
+{
+  "declared_mappings": [
+    {
+      "source_type": "CSV",
+      "dataset_name": "customers.csv",
+      "field_name": "full_name",
+      "declared_purpose": "Customer Account Creation & Identity Verification",
+      "retention_period": "5 Years Post Account Inactivity",
+      "retention_law_reference": "Consumer Protection Rules, 2020",
+      "data_owner": "Customer Success Operations",
+      "legal_basis_reference": "Contractual Necessity (Human Review Verified)"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "customers.csv",
+      "field_name": "email_address",
+      "declared_purpose": "Transactional Notifications & Authentication",
+      "retention_period": "5 Years Post Account Inactivity",
+      "retention_law_reference": "Consumer Protection Rules, 2020",
+      "data_owner": "Customer Success Operations",
+      "legal_basis_reference": "Contractual Necessity (Human Review Verified)"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "customers.csv",
+      "field_name": "phone_number",
+      "declared_purpose": "Two-Factor Authentication & SMS Alerts",
+      "retention_period": "3 Years Post Account Inactivity",
+      "retention_law_reference": "Telecom Regulations",
+      "data_owner": "Security Engineering",
+      "legal_basis_reference": "Legitimate Security Interest (Human Review Verified)"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "customers.csv",
+      "field_name": "pan_card_no",
+      "declared_purpose": "Statutory Financial KYC Verification",
+      "retention_period": "8 Years (Income Tax Act Section 149)",
+      "retention_law_reference": "Income Tax Act, 1961",
+      "data_owner": "Compliance & Legal",
+      "legal_basis_reference": "Statutory Obligation (Human Review Verified)"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "hr_employees.csv",
+      "field_name": "employee_name",
+      "declared_purpose": "HR Payroll Administration",
+      "retention_period": "7 Years Post Employment Termination",
+      "retention_law_reference": "Payment of Wages Act",
+      "data_owner": "Human Resources",
+      "legal_basis_reference": "Employment Contract (Human Review Verified)"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "hr_employees.csv",
+      "field_name": "aadhaar_number",
+      "declared_purpose": "PF & Gratuity Statutory Filing",
+      "retention_period": "10 Years Post Retirement",
+      "retention_law_reference": "EPFO Mandate / Aadhaar Act 2016",
+      "data_owner": "Payroll Compliance",
+      "legal_basis_reference": "Statutory Obligation (Human Review Verified)"
+    },
+    {
+      "source_type": "CSV",
+      "dataset_name": "hr_employees.csv",
+      "field_name": "salary_ctc",
+      "declared_purpose": "Compensation Disbursement",
+      "retention_period": "7 Years Post Employment Termination",
+      "retention_law_reference": "Income Tax Act, 1961",
+      "data_owner": "Finance Department",
+      "legal_basis_reference": "Contractual Necessity (Human Review Verified)"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:users",
+      "field_name": "user_id_email",
+      "declared_purpose": "Platform Single Sign-On and Recovery",
+      "retention_period": "3 Years Post Deletion Request",
+      "retention_law_reference": "Information Technology Rules 2011",
+      "data_owner": "Identity Access Management",
+      "legal_basis_reference": "User Consent (Human Review Verified)"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:billing_details",
+      "field_name": "credit_card_mask",
+      "declared_purpose": "Recurring Subscription Billing Tokenization",
+      "retention_period": "180 Days Post Transaction (PCI-DSS / RBI CoFT)",
+      "retention_law_reference": "RBI Card-on-File Tokenization Guidelines",
+      "data_owner": "Payment Operations",
+      "legal_basis_reference": "Contractual Necessity (Human Review Verified)"
+    },
+    {
+      "source_type": "SQL",
+      "dataset_name": "enterprise.db:auth_sessions",
+      "field_name": "client_ip_address",
+      "declared_purpose": "Cyber Threat Prevention & Access Logging",
+      "retention_period": "180 Days (CERT-In Mandate)",
+      "retention_law_reference": "CERT-In Cyber Security Directions 2022",
+      "data_owner": "SOC / Cybersecurity",
+      "legal_basis_reference": "Legal Security Obligation (Human Review Verified)"
+    }
+  ],
+  "disclaimer": "Declared purposes and retention schedules represent organizational privacy policies registered in this inventory. They are documentation references, not algorithmic proofs of legal compliance."
+}
